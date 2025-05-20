@@ -1,0 +1,14 @@
+/Users/beqa/Desktop/Projects/WebServer/WebServer/bin/Debug/net8.0/WebServer
+/Users/beqa/Desktop/Projects/WebServer/WebServer/bin/Debug/net8.0/WebServer.deps.json
+/Users/beqa/Desktop/Projects/WebServer/WebServer/bin/Debug/net8.0/WebServer.runtimeconfig.json
+/Users/beqa/Desktop/Projects/WebServer/WebServer/bin/Debug/net8.0/WebServer.dll
+/Users/beqa/Desktop/Projects/WebServer/WebServer/bin/Debug/net8.0/WebServer.pdb
+/Users/beqa/Desktop/Projects/WebServer/WebServer/obj/Debug/net8.0/WebServer.GeneratedMSBuildEditorConfig.editorconfig
+/Users/beqa/Desktop/Projects/WebServer/WebServer/obj/Debug/net8.0/WebServer.AssemblyInfoInputs.cache
+/Users/beqa/Desktop/Projects/WebServer/WebServer/obj/Debug/net8.0/WebServer.AssemblyInfo.cs
+/Users/beqa/Desktop/Projects/WebServer/WebServer/obj/Debug/net8.0/WebServer.csproj.CoreCompileInputs.cache
+/Users/beqa/Desktop/Projects/WebServer/WebServer/obj/Debug/net8.0/WebServer.dll
+/Users/beqa/Desktop/Projects/WebServer/WebServer/obj/Debug/net8.0/refint/WebServer.dll
+/Users/beqa/Desktop/Projects/WebServer/WebServer/obj/Debug/net8.0/WebServer.pdb
+/Users/beqa/Desktop/Projects/WebServer/WebServer/obj/Debug/net8.0/WebServer.genruntimeconfig.cache
+/Users/beqa/Desktop/Projects/WebServer/WebServer/obj/Debug/net8.0/ref/WebServer.dll
