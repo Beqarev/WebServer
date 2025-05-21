@@ -1,8 +1,77 @@
+# IDE-specific files
+####################
+# Rider
 .idea/
-*.sln.iml
-*.csproj.iml
-/bin/
-/obj/
+*.iml
+
+# Visual Studio
 .vs/
-*.user
 *.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build artifacts
+#################
+# Folders - These are key for ignoring bin/obj inside any project folder
+[Bb]in/
+[Oo]bj/
+
+# If your specific Logs folder should be ignored (application logs, not build logs)
+# Logs/
+
+# Visual Studio Fakes
+FakesAssemblies/
+
+# Test results
+TestResults/
+*.VisualState.xml
+*.trx
+
+# Build results (more specific patterns, good to have)
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Ww][Ii][Nn]32/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+
+# Other build artifacts
+*.ilk
+*.meta
+*.pch
+*.pdb
+*.pgc
+*.pgd
+*.rsp
+*.sbr
+*.tlb
+*.tli
+*.tlh
+*.tmp
+*.tmp_proj
+*_i.c
+*_p.c
+*_h.h
+
+# NuGet Packages
+# (No longer needed for modern .NET projects that use PackageReference in .csproj)
+# *.nupkg
+# packages/
+
+# Dotnet Local Tooling
+.store/
+
+# Environment variables file
+.env
+
+# User Secrets (if you use them)
+secrets.json
+
+# Backup and Office Temp Files
+*.[Bb][Aa][Kk]
+*~
