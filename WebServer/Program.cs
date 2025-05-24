@@ -29,9 +29,9 @@ namespace SimpleWebServer
 
                 while (true)
                 {
-                    Console.WriteLine("Ready and waiting for the next connection...");
+                    Console.WriteLine("Ready and waiting for the next connection");
                     TcpClient client = await listener.AcceptTcpClientAsync();
-                    Console.WriteLine($"Great! A new client just connected from: {client.Client.RemoteEndPoint}");
+                    Console.WriteLine($"new client just connected from: {client.Client.RemoteEndPoint}");
 
                     Thread clientThread = new Thread(() => HandleClientConnection(client));
                     clientThread.Name = $"ClientHandler-{client.Client.RemoteEndPoint}";
@@ -40,24 +40,23 @@ namespace SimpleWebServer
             }
             catch (SocketException se)
             {
-                Console.WriteLine($"\nOops! A network socket problem occurred: {se.Message} (Error Code: {se.SocketErrorCode})");
+                Console.WriteLine($"network socket problem occurred: {se.Message}");
                 if (se.SocketErrorCode == SocketError.AddressAlreadyInUse)
                 {
-                    Console.WriteLine($"It looks like port {Port} is already busy. Another application might be using it.");
+                    Console.WriteLine($"{Port} is busy");
                 }
                 Console.ResetColor();
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Oh dear, an unexpected issue popped up in the server's main loop: {ex.Message}");
-                Console.WriteLine("Here are the full details for debugging:");
+                Console.WriteLine(ex.Message);
                 Console.WriteLine(ex.ToString());
                 Console.ResetColor();
             }
             finally
             {
                 listener?.Stop();
-                Console.WriteLine("\nServer is shutting down. Goodbye!");
+                Console.WriteLine("Server is shutting down");
             }
         }
 
@@ -69,7 +68,6 @@ namespace SimpleWebServer
             {
                 clientEndPoint = (IPEndPoint)client.Client.RemoteEndPoint;
                 Console.WriteLine($"[{threadName}] Now handling the connection from {clientEndPoint}.");
-                Console.WriteLine($"[{threadName}] Working on the request from {clientEndPoint}");
                 Thread.Sleep(100);
                 Console.WriteLine($"[{threadName}] All done with the request from {clientEndPoint}!");
             }
@@ -77,13 +75,12 @@ namespace SimpleWebServer
             {
                 if (clientEndPoint != null)
                 {
-                    Console.WriteLine($"[{threadName}] Uh oh, ran into an issue while handling the client {clientEndPoint}: {ex.Message}");
+                    Console.WriteLine($"[{threadName}] ran into an issue while handling the client {clientEndPoint}: {ex.Message}");
                 }
                 else
                 {
                     Console.WriteLine($"[{threadName}] An error occurred while handling a client: {ex.Message}");
                 }
-                Console.WriteLine("Full error details for this client thread:");
                 Console.WriteLine(ex.ToString());
                 Console.ResetColor();
             }
@@ -92,11 +89,11 @@ namespace SimpleWebServer
                 client.Close();
                 if (clientEndPoint != null)
                 {
-                    Console.WriteLine($"[{threadName}] Connection with {clientEndPoint} has been closed.");
+                    Console.WriteLine($"[{threadName}] Connection with {clientEndPoint} has been closed");
                 }
                 else
                 {
-                    Console.WriteLine($"[{threadName}] A client connection was closed (their address wasn't available when closing).");
+                    Console.WriteLine($"[{threadName}] client connection was closed");
                 }
             }
         }
