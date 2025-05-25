@@ -7,10 +7,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const header = document.querySelector('h1');
     if (header) {
         header.addEventListener('mouseover', () => {
-            header.style.color = '#ff4500'; // Change color on hover
+            header.style.color = '#ff4500';
         });
         header.addEventListener('mouseout', () => {
-            header.style.color = '#0056b3'; // Change back
+            header.style.color = '#0056b3';
         });
     }
 });
